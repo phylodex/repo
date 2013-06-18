@@ -20,6 +20,34 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // set up the individual controllers for each mode
+    NSMutableArray *controllers = [NSMutableArray array];
+    
+    // set up the modal view controllers
+    PXRootViewController *phylodex = [[PXRootViewController alloc] init];
+    phylodex.title = @"Phylodex"; // set the title
+    PXWebSearchViewController *webSearch = [[PXWebSearchViewController alloc] init];
+    webSearch.title = @"Web Search";
+    // to-do: collection view
+    //PXShareViewController *share = [[PXShareViewController alloc] init];
+    
+    // add the modes to the controllers array
+    UINavigationController *phylodexNav = [[UINavigationController alloc] initWithRootViewController:phylodex];
+    [controllers addObject:phylodexNav];
+    UINavigationController *webSearchNav = [[UINavigationController alloc] initWithRootViewController:webSearch];
+    [controllers addObject:webSearchNav];
+    // to-do: make a collection view object
+    //    UINavigationController *shareNav = [[UINavigationController alloc] initWithRootViewController:share];
+//    [controllers addObject:shareNav];
+    
+    // set up the tab bar controller
+    _rootController = [[UITabBarController alloc] init];
+    _rootController.viewControllers = controllers;
+    
+    _window.rootViewController = _rootController;
+    [_window makeKeyAndVisible];
+    
     return YES;
 }
 
