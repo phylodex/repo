@@ -1,27 +1,27 @@
 //
-//  PXRootViewController.m
+//  PXDetailViewController.m
 //  Phylodex
 //
-//  Description: Main view for the Phylodex user collection of images
-//
-//  Created by Steve King on 2013-06-18.
+//  Created by Steve King on 2013-06-20.
 //  Copyright (c) 2013 Phylosoft. All rights reserved.
 //
-#import "PXRootViewController.h"
 
-@interface PXRootViewController ()
+#import "PXDetailViewController.h"
+
+@interface PXDetailViewController ()
 
 @end
 
-@implementation PXRootViewController
+@implementation PXDetailViewController
 
-@synthesize lifeforms;
+@synthesize delegate;
 
+#pragma mark - initialization
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"Phylodex";
+        // custom
     }
     return self;
 }
@@ -30,19 +30,26 @@
 {
     [super viewDidLoad];
     
-    // display edit button
-    // TO-DO implement handling of edit functions
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // set the navigation bar buttons
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
+                                     initWithTitle:@"Cancel"
+                                     style:UIBarButtonItemStylePlain
+                                     target:self
+                                     action:@selector(cancel:)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
+	
+	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Save"
+                                   style:UIBarButtonItemStyleDone
+                                   target:self
+                                   action:@selector(save:)];
+    self.navigationItem.rightBarButtonItem = saveButton;
 
-    // populate the collection of lifeforms (user photos)
-    lifeforms = [NSMutableArray array];
-    PXDummyCollection *collection = [[PXDummyCollection alloc] init];
-    for (PXDummyModel *model in collection.dummyModels) {
-        [lifeforms addObject:model];
-    }
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,15 +62,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    // this is determined by the number of photos the user has
-    return [lifeforms count];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,10 +83,6 @@
     }
     
     // Configure the cell...
-    PXDummyModel *lifeform = [lifeforms objectAtIndex:indexPath.row];
-    NSString *title = lifeform.name;
-	UILabel *label = [cell textLabel];
-	label.text = title;
     
     return cell;
 }
@@ -133,30 +137,18 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    
-    // set the child controller, and its delegate to the root controller
-    PXDetailViewController *detailViewController = [[PXDetailViewController alloc] init];
-    detailViewController.delegate = self;
-    // set the title of the detail view to the name of the animal (hard-coded for now)
-    
-    PXDummyModel *lifeform = [lifeforms objectAtIndex:indexPath.row];
-    NSString *title = lifeform.name;
-    detailViewController.title = title;
-    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
-#pragma mark - PXDetailViewControllerDelegate methods
+#pragma mark - handle navigation controller actions
 
-- (void)detailViewControllerDidSave:(PXDetailViewController *)controller
+- (IBAction)save:(id)sender
 {
-    // save the changes made by user in child controller to the persistent data store and reload data
-    [controller.navigationController popViewControllerAnimated:YES];
+    [delegate detailViewControllerDidSave:self];
 }
 
-- (void)detailViewControllerDidCancel:(PXDetailViewController *)controller
+-(IBAction)cancel:(id)sender
 {
-    // do nothing, just return to the phylodex
-    [controller.navigationController popViewControllerAnimated:YES];
+    [delegate detailViewControllerDidCancel:self];
 }
 
 @end

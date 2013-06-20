@@ -26,9 +26,7 @@
     
     // set up the modal view controllers
     PXRootViewController *phylodex = [[PXRootViewController alloc] init];
-    phylodex.title = @"Phylodex"; // set the title
     PXWebSearchViewController *webSearch = [[PXWebSearchViewController alloc] init];
-    webSearch.title = @"Web Search";
     // to-do: collection view
     //PXShareViewController *share = [[PXShareViewController alloc] init];
     
