@@ -14,6 +14,7 @@
 
 @implementation PXWebSearchViewController
 
+@synthesize background;
 @synthesize searchButton;
 @synthesize searchTextField;
 @synthesize clearButton;
@@ -81,6 +82,13 @@
 
 -(IBAction)backgroundClick:(id)sender {
 	[searchTextField resignFirstResponder];
+}
+
+# pragma mark - PXSearchResultsViewControllerDelegate methods
+
+- (void)searchViewControllerDidEnd:(PXSearchResultsViewController *)controller
+{
+    // keep a record of the previous search in case that same search is made again
 }
 
 @end

@@ -21,5 +21,5 @@
 
 
 @protocol PXSearchResultsViewControllerDelegate
--(void)searchViewControllerDidEnd:(PXSearchResultsViewController *)controller;
+- (void)searchViewControllerDidEnd:(PXSearchResultsViewController *)controller;
 @end
