@@ -32,6 +32,8 @@
 		1F293CFB17710670009C8DA9 /* PXShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F293CF917710670009C8DA9 /* PXShareViewController.xib */; };
 		1F5B74821773756E00F4F079 /* PXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B74801773756E00F4F079 /* PXDetailViewController.m */; };
 		1F5B74831773756E00F4F079 /* PXDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B74811773756E00F4F079 /* PXDetailViewController.xib */; };
+		1FECDE891774D400009A8D08 /* PXSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FECDE871774D400009A8D08 /* PXSearchResultsViewController.m */; };
+		1FECDE8A1774D400009A8D08 /* PXSearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FECDE881774D400009A8D08 /* PXSearchResultsViewController.xib */; };
 		1FEF45B51773C3C900B1E0D6 /* Lion.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF45B41773C3C900B1E0D6 /* Lion.png */; };
 		1FF7E89B1773ABF800215E38 /* PXDummyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7E89A1773ABF800215E38 /* PXDummyModel.m */; };
 		1FF7E89E1773AD0100215E38 /* PXDummyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7E89D1773AD0100215E38 /* PXDummyCollection.m */; };
@@ -82,6 +84,9 @@
 		1F5B747F1773756E00F4F079 /* PXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDetailViewController.h; sourceTree = "<group>"; };
 		1F5B74801773756E00F4F079 /* PXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDetailViewController.m; sourceTree = "<group>"; };
 		1F5B74811773756E00F4F079 /* PXDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXDetailViewController.xib; sourceTree = "<group>"; };
+		1FECDE861774D400009A8D08 /* PXSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSearchResultsViewController.h; sourceTree = "<group>"; };
+		1FECDE871774D400009A8D08 /* PXSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSearchResultsViewController.m; sourceTree = "<group>"; };
+		1FECDE881774D400009A8D08 /* PXSearchResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXSearchResultsViewController.xib; sourceTree = "<group>"; };
 		1FEF45B41773C3C900B1E0D6 /* Lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lion.png; sourceTree = "<group>"; };
 		1FF7E8991773ABF800215E38 /* PXDummyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXDummyModel.h; path = Phylodex/PXDummyModel.h; sourceTree = "<group>"; };
 		1FF7E89A1773ABF800215E38 /* PXDummyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXDummyModel.m; path = Phylodex/PXDummyModel.m; sourceTree = "<group>"; };
@@ -224,6 +229,8 @@
 				1F293CF21771036B009C8DA9 /* PXWebSearchViewController.h */,
 				1F293CF31771036B009C8DA9 /* PXWebSearchViewController.m */,
 				1F5B747F1773756E00F4F079 /* PXDetailViewController.h */,
+				1FECDE861774D400009A8D08 /* PXSearchResultsViewController.h */,
+				1FECDE871774D400009A8D08 /* PXSearchResultsViewController.m */,
 				1F5B74801773756E00F4F079 /* PXDetailViewController.m */,
 				1F293CED177101DC009C8DA9 /* PXRootViewController.h */,
 				1F293CEE177101DC009C8DA9 /* PXRootViewController.m */,
@@ -234,6 +241,7 @@
 		1FF7E8A61773B24600215E38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1FECDE881774D400009A8D08 /* PXSearchResultsViewController.xib */,
 				1F293CF41771036B009C8DA9 /* PXWebSearchViewController.xib */,
 				1F293CF917710670009C8DA9 /* PXShareViewController.xib */,
 				1F293CEF177101DC009C8DA9 /* PXRootViewController.xib */,
@@ -324,6 +332,7 @@
 				1F5B74831773756E00F4F079 /* PXDetailViewController.xib in Resources */,
 				1FF7E8A31773B14900215E38 /* Eagle.png in Resources */,
 				1FEF45B51773C3C900B1E0D6 /* Lion.png in Resources */,
+				1FECDE8A1774D400009A8D08 /* PXSearchResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +376,7 @@
 				1F5B74821773756E00F4F079 /* PXDetailViewController.m in Sources */,
 				1FF7E89B1773ABF800215E38 /* PXDummyModel.m in Sources */,
 				1FF7E89E1773AD0100215E38 /* PXDummyCollection.m in Sources */,
+				1FECDE891774D400009A8D08 /* PXSearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

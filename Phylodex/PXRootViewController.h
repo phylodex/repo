@@ -10,7 +10,6 @@
 
 #import <UIKit/UIKit.h>
 #import "PXDetailViewController.h"
-#import "PXDetailViewController.h"
 #import "PXDummyCollection.h"
 
 @interface PXRootViewController : UITableViewController <PXDetailViewControllerDelegate> {

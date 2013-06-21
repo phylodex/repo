@@ -42,15 +42,45 @@
 #pragma mark - UITextFieldDelegate methods
 
 // became first responder
-- (void)textFieldDidBeginEditing:(UITextField *)textField {}          
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    // user now editing text field
+}
 
 // may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
-- (void)textFieldDidEndEditing:(UITextField *)textField {}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    // ending editing text field
+}
 
 // called when clear button pressed. return NO to ignore (no notifications)
-- (BOOL)textFieldShouldClear:(UITextField *)textField {}
+//- (BOOL)textFieldShouldClear:(UITextField *)textField {}
 
 // called when 'return' key pressed. return NO to ignore.
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {}              
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {}
+
+#pragma mark - IBAction methods
+
+- (IBAction)searchButtonWasPressed:(id)sender
+{
+    // push the search results child view passing the search term
+    PXSearchResultsViewController *resultsViewController = [[PXSearchResultsViewController alloc] init];
+    resultsViewController.delegate = self;
+    
+    // set the title of the search view to the search string
+    NSString *query = searchTextField.text;
+    // TO-DO: check if empty string
+    resultsViewController.title = query;
+    [self.navigationController pushViewController:resultsViewController animated:YES];
+}
+
+- (IBAction)clearButtonWasPressed:(id)sender;
+{
+    // clears the text field
+}
+
+-(IBAction)backgroundClick:(id)sender {
+	[searchTextField resignFirstResponder];
+}
 
 @end
