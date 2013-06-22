@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F195642177557AF00AEB906 /* PXSearchResultPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F195640177557AF00AEB906 /* PXSearchResultPhotoViewController.m */; };
+		1F195643177557AF00AEB906 /* PXSearchResultPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F195641177557AF00AEB906 /* PXSearchResultPhotoViewController.xib */; };
+		1F195647177559EA00AEB906 /* PXNetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F195646177559EA00AEB906 /* PXNetworkConnection.m */; };
+		1F19564A1775687B00AEB906 /* PXXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1956491775687B00AEB906 /* PXXMLParser.m */; };
 		1F293CB31770FBC9009C8DA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F293CB21770FBC9009C8DA9 /* UIKit.framework */; };
 		1F293CB51770FBC9009C8DA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F293CB41770FBC9009C8DA9 /* Foundation.framework */; };
 		1F293CB71770FBC9009C8DA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F293CB61770FBC9009C8DA9 /* CoreGraphics.framework */; };
@@ -51,6 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F19563F177557AF00AEB906 /* PXSearchResultPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSearchResultPhotoViewController.h; sourceTree = "<group>"; };
+		1F195640177557AF00AEB906 /* PXSearchResultPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSearchResultPhotoViewController.m; sourceTree = "<group>"; };
+		1F195641177557AF00AEB906 /* PXSearchResultPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXSearchResultPhotoViewController.xib; sourceTree = "<group>"; };
+		1F195645177559EA00AEB906 /* PXNetworkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXNetworkConnection.h; path = Phylodex/PXNetworkConnection.h; sourceTree = "<group>"; };
+		1F195646177559EA00AEB906 /* PXNetworkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXNetworkConnection.m; path = Phylodex/PXNetworkConnection.m; sourceTree = "<group>"; };
+		1F1956481775687B00AEB906 /* PXXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXXMLParser.h; path = Phylodex/PXXMLParser.h; sourceTree = "<group>"; };
+		1F1956491775687B00AEB906 /* PXXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXXMLParser.m; path = Phylodex/PXXMLParser.m; sourceTree = "<group>"; };
 		1F293CAF1770FBC9009C8DA9 /* Phylodex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phylodex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F293CB21770FBC9009C8DA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F293CB41770FBC9009C8DA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -212,6 +223,10 @@
 		1FF7E8A41773B1E700215E38 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1F195645177559EA00AEB906 /* PXNetworkConnection.h */,
+				1F195646177559EA00AEB906 /* PXNetworkConnection.m */,
+				1F1956481775687B00AEB906 /* PXXMLParser.h */,
+				1F1956491775687B00AEB906 /* PXXMLParser.m */,
 				1FF7E8991773ABF800215E38 /* PXDummyModel.h */,
 				1FF7E89C1773AD0100215E38 /* PXDummyCollection.h */,
 				1FF7E89D1773AD0100215E38 /* PXDummyCollection.m */,
@@ -228,6 +243,8 @@
 				1F293CF817710670009C8DA9 /* PXShareViewController.m */,
 				1F293CF21771036B009C8DA9 /* PXWebSearchViewController.h */,
 				1F293CF31771036B009C8DA9 /* PXWebSearchViewController.m */,
+				1F19563F177557AF00AEB906 /* PXSearchResultPhotoViewController.h */,
+				1F195640177557AF00AEB906 /* PXSearchResultPhotoViewController.m */,
 				1F5B747F1773756E00F4F079 /* PXDetailViewController.h */,
 				1FECDE861774D400009A8D08 /* PXSearchResultsViewController.h */,
 				1FECDE871774D400009A8D08 /* PXSearchResultsViewController.m */,
@@ -241,6 +258,7 @@
 		1FF7E8A61773B24600215E38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1F195641177557AF00AEB906 /* PXSearchResultPhotoViewController.xib */,
 				1FECDE881774D400009A8D08 /* PXSearchResultsViewController.xib */,
 				1F293CF41771036B009C8DA9 /* PXWebSearchViewController.xib */,
 				1F293CF917710670009C8DA9 /* PXShareViewController.xib */,
@@ -333,6 +351,7 @@
 				1FF7E8A31773B14900215E38 /* Eagle.png in Resources */,
 				1FEF45B51773C3C900B1E0D6 /* Lion.png in Resources */,
 				1FECDE8A1774D400009A8D08 /* PXSearchResultsViewController.xib in Resources */,
+				1F195643177557AF00AEB906 /* PXSearchResultPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +396,9 @@
 				1FF7E89B1773ABF800215E38 /* PXDummyModel.m in Sources */,
 				1FF7E89E1773AD0100215E38 /* PXDummyCollection.m in Sources */,
 				1FECDE891774D400009A8D08 /* PXSearchResultsViewController.m in Sources */,
+				1F195642177557AF00AEB906 /* PXSearchResultPhotoViewController.m in Sources */,
+				1F195647177559EA00AEB906 /* PXNetworkConnection.m in Sources */,
+				1F19564A1775687B00AEB906 /* PXXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

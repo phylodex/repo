@@ -64,20 +64,36 @@
 
 - (IBAction)searchButtonWasPressed:(id)sender
 {
-    // push the search results child view passing the search term
-    PXSearchResultsViewController *resultsViewController = [[PXSearchResultsViewController alloc] init];
-    resultsViewController.delegate = self;
+    // check to make sure the field isn't empty
+    if ([searchTextField.text length] != 0)
+    {
+        // TO-DO: create a new network search
+        
+        // make sure we can connect to the internet
+        PXNetworkConnection *connection = [[PXNetworkConnection alloc] init];
+        
+        // make the search result, and extract the data
+        // note: will eventually implement as a block so that the user receives feedback that the search is under way
+        NSString *searchResultXMLData = [connection queryWebServiceForData:searchTextField.text];
+        NSMutableArray *searchResultItems = [PXXMLParser extractItemsFromXMLData:searchResultXMLData];
+        
+        // push the search results child view passing the network search result
+        PXSearchResultsViewController *resultsViewController = [[PXSearchResultsViewController alloc] init];
+        resultsViewController.delegate = self;
+        resultsViewController.searchResults = searchResultItems;
     
-    // set the title of the search view to the search string
-    NSString *query = searchTextField.text;
-    // TO-DO: check if empty string
-    resultsViewController.title = query;
-    [self.navigationController pushViewController:resultsViewController animated:YES];
+        // set the title of the search view to the search string
+        NSString *query = searchTextField.text;
+        resultsViewController.title = query;
+        [self.navigationController pushViewController:resultsViewController animated:YES];
+    }
 }
 
 - (IBAction)clearButtonWasPressed:(id)sender;
 {
     // clears the text field
+    searchTextField.text = nil;
+    [searchTextField resignFirstResponder];
 }
 
 -(IBAction)backgroundClick:(id)sender {
@@ -89,6 +105,7 @@
 - (void)searchViewControllerDidEnd:(PXSearchResultsViewController *)controller
 {
     // keep a record of the previous search in case that same search is made again
+    
 }
 
 @end

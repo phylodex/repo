@@ -14,6 +14,8 @@
 
 @implementation PXSearchResultsViewController
 
+@synthesize searchResults;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

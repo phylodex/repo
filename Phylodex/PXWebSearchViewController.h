@@ -10,6 +10,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PXSearchResultsViewController.h"
+#import "PXNetworkConnection.h"
+#import "PXXMLParser.h"
 
 @interface PXWebSearchViewController : UIViewController <UITextFieldDelegate, PXSearchResultsViewControllerDelegate> {
     IBOutlet UITextField *searchTextField;
