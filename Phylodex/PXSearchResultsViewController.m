@@ -1,7 +1,7 @@
 //
 //  PXSearchResultsViewController.m
 //  Phylodex
-//afafsfsfsd
+
 //  Created by Steve King on 2013-06-21.
 //  Copyright (c) 2013 Phylosoft. All rights reserved.
 //
