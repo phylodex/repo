@@ -3,6 +3,7 @@
 //  Phylodex
 //
 //  Description: Shows the Detail view for each user photo
+//  MengTing Yang
 //
 //  Created by Steve King on 2013-06-20.
 //  Copyright (c) 2013 Phylosoft. All rights reserved.
