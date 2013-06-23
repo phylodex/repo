@@ -44,6 +44,10 @@
 		1FF7E89B1773ABF800215E38 /* PXDummyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7E89A1773ABF800215E38 /* PXDummyModel.m */; };
 		1FF7E89E1773AD0100215E38 /* PXDummyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7E89D1773AD0100215E38 /* PXDummyCollection.m */; };
 		1FF7E8A31773B14900215E38 /* Eagle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FF7E8A21773B14900215E38 /* Eagle.png */; };
+		EDB03D8117777164009B0D55 /* Capture.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB03D7D17777164009B0D55 /* Capture.png */; };
+		EDB03D8217777164009B0D55 /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB03D7E17777164009B0D55 /* Share.png */; };
+		EDB03D8317777164009B0D55 /* Phylodex.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB03D7F17777164009B0D55 /* Phylodex.png */; };
+		EDB03D8417777164009B0D55 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = EDB03D8017777164009B0D55 /* second.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,10 @@
 		1FF7E89C1773AD0100215E38 /* PXDummyCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXDummyCollection.h; path = Phylodex/PXDummyCollection.h; sourceTree = "<group>"; };
 		1FF7E89D1773AD0100215E38 /* PXDummyCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXDummyCollection.m; path = Phylodex/PXDummyCollection.m; sourceTree = "<group>"; };
 		1FF7E8A21773B14900215E38 /* Eagle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eagle.png; sourceTree = "<group>"; };
+		EDB03D7D17777164009B0D55 /* Capture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture.png; sourceTree = "<group>"; };
+		EDB03D7E17777164009B0D55 /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Share.png; sourceTree = "<group>"; };
+		EDB03D7F17777164009B0D55 /* Phylodex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phylodex.png; sourceTree = "<group>"; };
+		EDB03D8017777164009B0D55 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,10 @@
 		1F293CBB1770FBC9009C8DA9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EDB03D7D17777164009B0D55 /* Capture.png */,
+				EDB03D7E17777164009B0D55 /* Share.png */,
+				EDB03D7F17777164009B0D55 /* Phylodex.png */,
+				EDB03D8017777164009B0D55 /* second.png */,
 				1F293CBC1770FBC9009C8DA9 /* Phylodex-Info.plist */,
 				1F293CBD1770FBC9009C8DA9 /* InfoPlist.strings */,
 				1F293CC01770FBC9009C8DA9 /* main.m */,
@@ -361,6 +373,10 @@
 				1FECDE8A1774D400009A8D08 /* PXSearchResultsViewController.xib in Resources */,
 				1F195643177557AF00AEB906 /* PXSearchResultPhotoViewController.xib in Resources */,
 				087AF3A81776E475004034F3 /* PXNameAndImageCell.xib in Resources */,
+				EDB03D8117777164009B0D55 /* Capture.png in Resources */,
+				EDB03D8217777164009B0D55 /* Share.png in Resources */,
+				EDB03D8317777164009B0D55 /* Phylodex.png in Resources */,
+				EDB03D8417777164009B0D55 /* second.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
