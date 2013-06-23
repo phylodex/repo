@@ -11,8 +11,9 @@
 #import <UIKit/UIKit.h>
 #import "PXDetailViewController.h"
 #import "PXDummyCollection.h"
+#import "PXNameAndImageCell.h"
 
-@interface PXRootViewController : UITableViewController <PXDetailViewControllerDelegate> {
+@interface PXRootViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, PXDetailViewControllerDelegate> {
     PXDetailViewController *childController;
 }
 

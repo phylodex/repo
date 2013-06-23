@@ -14,6 +14,8 @@
 @end
 
 @implementation PXRootViewController
+//id for the custom cell
+static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
 @synthesize lifeforms;
 
@@ -40,6 +42,15 @@
     for (PXDummyModel *model in collection.dummyModels) {
         [lifeforms addObject:model];
     }
+    
+    //get the right table
+    UITableView *tableView = (id)[self.view viewWithTag:1];
+    //set the height of the cells
+    tableView.rowHeight = 65;
+    //reference to the custom cell class
+    UINib *nib = [UINib nibWithNibName:@"PXNameAndImageCell" bundle:nil];
+    [tableView registerNib:nib
+    forCellReuseIdentifier:CellTableIdentifier];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -68,18 +79,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    PXNameAndImageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
     
     // Configure the cell...
     PXDummyModel *lifeform = [lifeforms objectAtIndex:indexPath.row];
-    NSString *title = lifeform.name;
-	UILabel *label = [cell textLabel];
-	label.text = title;
-    
+    cell.name = lifeform.name;
+	cell.species = @"species";
+    //cell.image = lifeform.image;  //model doesn't seem to properly have these to access
+    cell.imagepath = @"Lion.png"; //temporarily make them all lions to see that the UIImage works.
     return cell;
 }
 
