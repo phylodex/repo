@@ -2,29 +2,35 @@
 //  PXWebSearchViewController.h
 //  Phylodex
 //
+//  Description: Used to make queries to the web service to find lifeform pictures
+//
 //  Created by Steve King on 2013-06-18.
 //  Copyright (c) 2013 Phylosoft. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "PXSearchResultsViewController.h"
+#import "PXNetworkConnection.h"
+#import "PXXMLParser.h"
 
-@class PXSearchResultsViewController;
-
-@interface PXWebSearchViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource,UITableViewDelegate> {
-    UITableView *tableView;
-    UISearchBar *searchBar;
-    NSMutableArray *totalStrings;
-//    PXSearchResultsViewController *searchResults;
-//    NSMutableArray *filteredStrings;
-//    bool isFiltered;
+@interface PXWebSearchViewController : UIViewController <UITextFieldDelegate, PXSearchResultsViewControllerDelegate> {
+    IBOutlet UITextField *searchTextField;
+	IBOutlet UIButton *searchButton;
+    IBOutlet UIButton *clearButton;
+    IBOutlet UIButton *background;
+    PXSearchResultsViewController *childController;
 }
 
-@property (retain, nonatomic) IBOutlet UISearchBar *searchBar;
-//@property (retain, nonatomic) IBOutlet UIButton *clearButton;
-//@property (retain, nonatomic) IBOutlet UIButton *searchButton;
-@property (retain, nonatomic) IBOutlet UITableView *tableView;
-@property (retain, nonatomic) NSMutableArray *totalStrings;
-//@property (retain, nonatomic) PXSearchResultsViewController *searchResults;
+@property (nonatomic, retain) UIButton *background;
+@property (nonatomic, retain) UITextField *searchTextField;
+@property (nonatomic, retain) UIButton *searchButton;
+@property (nonatomic, retain) UIButton *clearButton;
+
+// TO-DO: Add the IBAction methods and connect them to the controls in Interface builder
+// implement the IBAction methods to handle input
+// implement the UITextFieldDelegate methods to improve interaction
+- (IBAction)searchButtonWasPressed:(id)sender;
+- (IBAction)clearButtonWasPressed:(id)sender;
+- (IBAction)backgroundClick:(id)sender;
 
 @end

@@ -2,18 +2,25 @@
 //  PXSearchResultsViewController.h
 //  Phylodex
 //
-//  Created by Daniel Hua on 13-6-21.
-//  Copyright (c) 2013年 Phylosoft. All rights reserved.
+//  Description: Table of textual results for a web search
+//
+//  Created by Steve King on 2013-06-21.
+//  Copyright (c) 2013 Phylosoft. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PXSearchResultsViewController : UIViewController <UIApplicationDelegate,UITableViewDataSource,UITableViewDelegate>{
-    NSMutableArray *resultArray;
-    UITableView *table;
-}
+@protocol PXSearchResultsViewControllerDelegate;
 
-@property (retain, nonatomic) NSMutableArray *resultArray;
-@property (retain, nonatomic) UITableView *table;
 
+@interface PXSearchResultsViewController : UITableViewController
+
+@property (nonatomic, assign)id <PXSearchResultsViewControllerDelegate>delegate;
+@property (nonatomic, retain)NSMutableArray *searchResults;
+
+@end
+
+
+@protocol PXSearchResultsViewControllerDelegate
+- (void)searchViewControllerDidEnd:(PXSearchResultsViewController *)controller;
 @end

@@ -13,16 +13,17 @@
 @end
 
 @implementation PXWebSearchViewController
-@synthesize tableView;
-@synthesize totalStrings;
-//@synthesize searchResults;
-@synthesize searchBar;
+
+@synthesize background;
+@synthesize searchButton;
+@synthesize searchTextField;
+@synthesize clearButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"Web Search";
+        self.title = @"Search";
     }
     return self;
 }
@@ -31,130 +32,80 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.searchBar.delegate = self;
-    self.tableView.delegate = self;
-    
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardShown) name:UIKeyboardDidHideNotification object:nil];
-//    
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardHidden) name:UIKeyboardWillHideNotification object:nil];
-    
-    totalStrings = [[NSMutableArray alloc] initWithObjects:@"one",@"two",@"three",@"four",nil];
-    
 }
-
-//-(void)keyboardShown:(NSNotification*) note {
-//    CGRect keyboardFrame;
-//    [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&keyboardFrame];
-//    CGRect tableViewFrame =tableView.frame;
-//    tableViewFrame.size.height -= keyboardFrame.size.height;
-//    [tableView setFrame:tableViewFrame];
-//}
-//
-//-(IBAction)tapBackground:(id)sender{
-//    [searchBar resignFirstResponder];
-//    
-//}
-
-//-(void)keyboardHidden:(NSNotification*) note {
-//    [tableView setFrame:self.view.bounds];
-//}
-
-//-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-//    if (searchText.length == 0) {
-//        isFiltered = false;
-//    }
-//    else {
-//        isFiltered = true;
-//        filteredStrings = [[NSMutableArray alloc]init];
-//        
-//        for (NSString *str in totalStrings) {
-//            NSRange strRange = [str rangeOfString:searchText options:NSCaseInsensitiveSearch];
-//            if (strRange.location != NSNotFound) {
-//                [filteredStrings addObject:str];
-//            }
-//        }
-//    }
-//    [self.tableView reloadData];
-//    
-//}
--(bool)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-    return false;
-}
-
--(void)searchBarSearchButtonClicked:(UISearchBar *)SearchBar {
-    [searchBar resignFirstResponder];
-    [totalStrings removeAllObjects];
-    NSString *query = searchBar.text;
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.sfu.ca/~dhua/%@/%@.txt",query,query]];
-    NSLog(@"%@",url);
-
-//need to change in later version to read file online
-    NSArray *data = [[NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByString:@"\n"];
-    
-    [totalStrings addObject: data];
-    
-    
-//    searchResults.resultArray = totalStrings;
-    [self.tableView reloadData];
-    
-    PXSearchResultsViewController *resultView = [[PXSearchResultsViewController alloc] initWithNibName:@"PXSearchResultsViewController" bundle:nil];
-    resultView.resultArray =self.totalStrings;
-    [self.navigationController pushViewController:resultView animated:true];
-
-//    self.searchResults = resultView;
-    
-    
-//    [self.view.superview addSubview:resultView.view];
-    
-//    [self.view insertSubview:resultView.view atIndex:2];
-}
-
--(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
--(NSInteger)tableView: (UITableView *) tableView numberOfRowsInSection:(NSInteger)section {
-//    if (isFiltered) {
-//        return [filteredStrings count];
-//    }
-//    else {
-        return [totalStrings count];
-//    }
-//
-}
-
--(UITableViewCell*)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
-    cell.textLabel.text = [totalStrings objectAtIndex:indexPath.row];
-    return cell;
-}
-
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *cellId = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-//    
-//    if (!cell) {
-//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-//    }
-//    if (!isFiltered) {
-//        cell.textLabel.text = [totalStrings objectAtIndex:indexPath.row];
-//        
-//    }
-//    else {
-//        
-//        cell.textLabel.text = [filteredStrings objectAtIndex:indexPath.row];
-//        
-//    }
-//    return cell;
-//}
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITextFieldDelegate methods
+
+// became first responder
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    // user now editing text field
+}
+
+// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    // ending editing text field
+}
+
+// called when clear button pressed. return NO to ignore (no notifications)
+//- (BOOL)textFieldShouldClear:(UITextField *)textField {}
+
+// called when 'return' key pressed. return NO to ignore.
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField {}
+
+#pragma mark - IBAction methods
+
+- (IBAction)searchButtonWasPressed:(id)sender
+{
+    // check to make sure the field isn't empty
+    if ([searchTextField.text length] != 0)
+    {
+        // TO-DO: create a new network search
+        
+        // make sure we can connect to the internet
+        PXNetworkConnection *connection = [[PXNetworkConnection alloc] init];
+        
+        // make the search result, and extract the data
+        // note: will eventually implement as a block so that the user receives feedback that the search is under way
+        NSString *searchResultXMLData = [connection queryWebServiceForData:searchTextField.text];
+        NSMutableArray *searchResultItems = [PXXMLParser extractItemsFromXMLData:searchResultXMLData];
+        
+        // push the search results child view passing the network search result
+        PXSearchResultsViewController *resultsViewController = [[PXSearchResultsViewController alloc] init];
+        resultsViewController.delegate = self;
+        resultsViewController.searchResults = searchResultItems;
+        
+        // set the title of the search view to the search string
+        NSString *query = searchTextField.text;
+        resultsViewController.title = query;
+        [self.navigationController pushViewController:resultsViewController animated:YES];
+    }
+}
+
+- (IBAction)clearButtonWasPressed:(id)sender;
+{
+    // clears the text field
+    searchTextField.text = nil;
+    [searchTextField resignFirstResponder];
+}
+
+-(IBAction)backgroundClick:(id)sender {
+	[searchTextField resignFirstResponder];
+}
+
+# pragma mark - PXSearchResultsViewControllerDelegate methods
+
+- (void)searchViewControllerDidEnd:(PXSearchResultsViewController *)controller
+{
+    // keep a record of the previous search in case that same search is made again
+    
 }
 
 @end
