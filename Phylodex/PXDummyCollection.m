@@ -23,8 +23,13 @@
         PXDummyModel *dummy = [PXDummyModel alloc];
         dummy.name = animal;
         // Note: Not sure if this photo is actually saved
-        NSString *pathToImageFile = [[NSBundle mainBundle] pathForResource:animal ofType:@"png" inDirectory:@"Resources"];
-        dummy.image = [UIImage imageWithContentsOfFile:pathToImageFile];
+        //NSString *pathToImageFile = [[NSBundle mainBundle] pathForResource:animal ofType:@"png" inDirectory:@"Resources"];
+        //NSString *pathToImageFile = [NSString stringWithFormat:@"%@%@", animal, @".png"];
+        
+        //UIImage *image = [UIImage imageWithContentsOfFile:pathToImageFile];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@%@", animal, @".png"]];
+        dummy.image = image;
+        dummy.species = @"species";
         [dummyModels addObject:dummy];
     }
     

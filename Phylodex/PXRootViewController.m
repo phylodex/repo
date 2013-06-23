@@ -81,15 +81,17 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *CellIdentifier = @"Cell";
     PXNameAndImageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+    if (cell == nil) {
+        cell = [[PXNameAndImageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
     PXDummyModel *lifeform = [lifeforms objectAtIndex:indexPath.row];
     cell.name = lifeform.name;
-	cell.species = @"species";
-    //cell.image = lifeform.image;  //model doesn't seem to properly have these to access
-    // need to fix this so the model returns a UIImage
-    cell.imagepath = [NSString stringWithFormat:@"%@%@", lifeform.name, @".png"];
+	cell.species = lifeform.species;
+    cell.image = lifeform.image;  
     return cell;
 }
 

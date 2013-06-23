@@ -12,5 +12,6 @@
 
 @synthesize image;
 @synthesize name;
+@synthesize species;
 
 @end
