@@ -86,7 +86,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     cell.name = lifeform.name;
 	cell.species = @"species";
     //cell.image = lifeform.image;  //model doesn't seem to properly have these to access
-    cell.imagepath = @"Lion.png"; //temporarily make them all lions to see that the UIImage works.
+    cell.imagepath = [NSString stringWithFormat:@"%@%@", lifeform.name, @".png"];
     return cell;
 }
 
