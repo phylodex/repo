@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		082F898B1777763800780AA5 /* Penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = 082F898A1777763800780AA5 /* Penguin.png */; };
 		082F898D177776C600780AA5 /* Housecat.png in Resources */ = {isa = PBXBuildFile; fileRef = 082F898C177776C600780AA5 /* Housecat.png */; };
+		082F898F1778236600780AA5 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 082F898E1778236600780AA5 /* Search.png */; };
 		087AF3A61776E46A004034F3 /* PXNameAndImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 087AF3A51776E46A004034F3 /* PXNameAndImageCell.m */; };
 		087AF3A81776E475004034F3 /* PXNameAndImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087AF3A71776E475004034F3 /* PXNameAndImageCell.xib */; };
 		1F08DAE31777CE53005F18EF /* PXSearchResultPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F08DAE11777CE52005F18EF /* PXSearchResultPhotoViewController.m */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		082F898A1777763800780AA5 /* Penguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Penguin.png; sourceTree = "<group>"; };
 		082F898C177776C600780AA5 /* Housecat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Housecat.png; sourceTree = "<group>"; };
+		082F898E1778236600780AA5 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		087AF3A41776E46A004034F3 /* PXNameAndImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNameAndImageCell.h; sourceTree = "<group>"; };
 		087AF3A51776E46A004034F3 /* PXNameAndImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNameAndImageCell.m; sourceTree = "<group>"; };
 		087AF3A71776E475004034F3 /* PXNameAndImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXNameAndImageCell.xib; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				EDB03D7D17777164009B0D55 /* Capture.png */,
 				EDB03D7E17777164009B0D55 /* Share.png */,
 				EDB03D7F17777164009B0D55 /* Phylodex.png */,
+				082F898E1778236600780AA5 /* Search.png */,
 				EDB03D8017777164009B0D55 /* second.png */,
 				1F293CBC1770FBC9009C8DA9 /* Phylodex-Info.plist */,
 				1F293CBD1770FBC9009C8DA9 /* InfoPlist.strings */,
@@ -385,6 +388,7 @@
 				B6A16AAC17777D800024F0BB /* PXSearchResultsViewController.xib in Resources */,
 				B6A16AAE17777D800024F0BB /* PXWebSearchViewController.xib in Resources */,
 				1F08DAE41777CE53005F18EF /* PXSearchResultPhotoViewController.xib in Resources */,
+				082F898F1778236600780AA5 /* Search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

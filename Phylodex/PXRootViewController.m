@@ -26,6 +26,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     self = [super initWithStyle:style];
     if (self) {
         self.title = @"Phylodex";
+        self.tabBarItem.image = [UIImage imageNamed:@"Phylodex"];
     }
     return self;
 }
