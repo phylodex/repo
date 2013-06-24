@@ -26,8 +26,7 @@
 @property (nonatomic, retain) UIButton *searchButton;
 @property (nonatomic, retain) UIButton *clearButton;
 
-// TO-DO: Add the IBAction methods and connect them to the controls in Interface builder
-// implement the IBAction methods to handle input
+// TO-DO: 
 // implement the UITextFieldDelegate methods to improve interaction
 - (IBAction)searchButtonWasPressed:(id)sender;
 - (IBAction)clearButtonWasPressed:(id)sender;

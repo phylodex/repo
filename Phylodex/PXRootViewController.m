@@ -52,7 +52,8 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     tableView.rowHeight = 65;
     //reference to the custom cell class
     UINib *nib = [UINib nibWithNibName:@"PXNameAndImageCell" bundle:nil];
-    [tableView registerNib:nib forCellReuseIdentifier:CellTableIdentifier];
+    [tableView registerNib:nib
+    forCellReuseIdentifier:CellTableIdentifier];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -154,7 +155,6 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     PXDummyModel *lifeform = [lifeforms objectAtIndex:indexPath.row];
     NSString *title = lifeform.name;
     detailViewController.title = title;
-    detailViewController.image = lifeform.image;
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

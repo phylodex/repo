@@ -2,6 +2,8 @@
 //  PXSearchResultPhotoViewController.h
 //  Phylodex
 //
+//  Description: Displays the search result photo with accreditation info
+//
 //  Created by Steve King on 2013-06-23.
 //  Copyright (c) 2013 Phylosoft. All rights reserved.
 //

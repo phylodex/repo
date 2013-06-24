@@ -33,7 +33,7 @@
 {
     // TO-DO: query the webservice for a photo
     
-    // for prototype, we return a hard-coded image
+    // for prototype, we do nothing
     return nil;
 }
 

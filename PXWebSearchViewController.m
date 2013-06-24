@@ -24,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"Search";
-        self.tabBarItem.image = [UIImage imageNamed:@"Capture"];
+        self.tabBarItem.image = [UIImage imageNamed:@"Search"];
     }
     return self;
 }
