@@ -388,7 +388,11 @@
 				B6A16AAC17777D800024F0BB /* PXSearchResultsViewController.xib in Resources */,
 				B6A16AAE17777D800024F0BB /* PXWebSearchViewController.xib in Resources */,
 				1F08DAE41777CE53005F18EF /* PXSearchResultPhotoViewController.xib in Resources */,
+<<<<<<< HEAD
 				1FB8C31117783E6000E51694 /* coding_standards.txt in Resources */,
+=======
+				082F898F1778236600780AA5 /* Search.png in Resources */,
+>>>>>>> a47e337fd84579054d88add4dc4516c5cbfd2f24
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
