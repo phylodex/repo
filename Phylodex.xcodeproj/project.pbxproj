@@ -36,8 +36,9 @@
 		1F293CF1177101DC009C8DA9 /* PXRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F293CEF177101DC009C8DA9 /* PXRootViewController.xib */; };
 		1F293CFA17710670009C8DA9 /* PXShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F293CF817710670009C8DA9 /* PXShareViewController.m */; };
 		1F293CFB17710670009C8DA9 /* PXShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F293CF917710670009C8DA9 /* PXShareViewController.xib */; };
-		1F5B74821773756E00F4F079 /* PXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B74801773756E00F4F079 /* PXDetailViewController.m */; };
-		1F5B74831773756E00F4F079 /* PXDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5B74811773756E00F4F079 /* PXDetailViewController.xib */; };
+		1F2F7D48177903DA002D2CB4 /* PXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F7D46177903DA002D2CB4 /* PXDetailViewController.m */; };
+		1F2F7D49177903DA002D2CB4 /* PXDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F7D47177903DA002D2CB4 /* PXDetailViewController.xib */; };
+		1FB8C31117783E6000E51694 /* coding_standards.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1FB8C31017783E6000E51694 /* coding_standards.txt */; };
 		1FEF45B51773C3C900B1E0D6 /* Lion.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF45B41773C3C900B1E0D6 /* Lion.png */; };
 		1FF7E89B1773ABF800215E38 /* PXDummyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7E89A1773ABF800215E38 /* PXDummyModel.m */; };
 		1FF7E89E1773AD0100215E38 /* PXDummyCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7E89D1773AD0100215E38 /* PXDummyCollection.m */; };
@@ -102,9 +103,10 @@
 		1F293CF717710670009C8DA9 /* PXShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXShareViewController.h; sourceTree = "<group>"; };
 		1F293CF817710670009C8DA9 /* PXShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXShareViewController.m; sourceTree = "<group>"; };
 		1F293CF917710670009C8DA9 /* PXShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXShareViewController.xib; sourceTree = "<group>"; };
-		1F5B747F1773756E00F4F079 /* PXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDetailViewController.h; sourceTree = "<group>"; };
-		1F5B74801773756E00F4F079 /* PXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDetailViewController.m; sourceTree = "<group>"; };
-		1F5B74811773756E00F4F079 /* PXDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXDetailViewController.xib; sourceTree = "<group>"; };
+		1F2F7D45177903DA002D2CB4 /* PXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDetailViewController.h; sourceTree = "<group>"; };
+		1F2F7D46177903DA002D2CB4 /* PXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDetailViewController.m; sourceTree = "<group>"; };
+		1F2F7D47177903DA002D2CB4 /* PXDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXDetailViewController.xib; sourceTree = "<group>"; };
+		1FB8C31017783E6000E51694 /* coding_standards.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = coding_standards.txt; sourceTree = "<group>"; };
 		1FEF45B41773C3C900B1E0D6 /* Lion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lion.png; sourceTree = "<group>"; };
 		1FF7E8991773ABF800215E38 /* PXDummyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXDummyModel.h; path = Phylodex/PXDummyModel.h; sourceTree = "<group>"; };
 		1FF7E89A1773ABF800215E38 /* PXDummyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXDummyModel.m; path = Phylodex/PXDummyModel.m; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		1F293CBA1770FBC9009C8DA9 /* Phylodex */ = {
 			isa = PBXGroup;
 			children = (
+				1FB8C31017783E6000E51694 /* coding_standards.txt */,
 				1F293CC31770FBC9009C8DA9 /* PXAppDelegate.h */,
 				1F293CC41770FBC9009C8DA9 /* PXAppDelegate.m */,
 				1FF7E8A61773B24600215E38 /* Views */,
@@ -270,12 +273,12 @@
 				B6A16AA717777D800024F0BB /* PXWebSearchViewController.m */,
 				1F293CF717710670009C8DA9 /* PXShareViewController.h */,
 				1F293CF817710670009C8DA9 /* PXShareViewController.m */,
-				1F5B747F1773756E00F4F079 /* PXDetailViewController.h */,
-				1F5B74801773756E00F4F079 /* PXDetailViewController.m */,
 				1F293CED177101DC009C8DA9 /* PXRootViewController.h */,
 				1F293CEE177101DC009C8DA9 /* PXRootViewController.m */,
 				087AF3A41776E46A004034F3 /* PXNameAndImageCell.h */,
 				087AF3A51776E46A004034F3 /* PXNameAndImageCell.m */,
+				1F2F7D45177903DA002D2CB4 /* PXDetailViewController.h */,
+				1F2F7D46177903DA002D2CB4 /* PXDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -283,13 +286,13 @@
 		1FF7E8A61773B24600215E38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1F2F7D47177903DA002D2CB4 /* PXDetailViewController.xib */,
 				1F08DAE21777CE53005F18EF /* PXSearchResultPhotoViewController.xib */,
 				B6A16AA517777D800024F0BB /* PXSearchResultsViewController.xib */,
 				B6A16AA817777D800024F0BB /* PXWebSearchViewController.xib */,
 				087AF3A71776E475004034F3 /* PXNameAndImageCell.xib */,
 				1F293CF917710670009C8DA9 /* PXShareViewController.xib */,
 				1F293CEF177101DC009C8DA9 /* PXRootViewController.xib */,
-				1F5B74811773756E00F4F079 /* PXDetailViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -372,7 +375,6 @@
 				1F293CCB1770FBC9009C8DA9 /* Default-568h@2x.png in Resources */,
 				1F293CF1177101DC009C8DA9 /* PXRootViewController.xib in Resources */,
 				1F293CFB17710670009C8DA9 /* PXShareViewController.xib in Resources */,
-				1F5B74831773756E00F4F079 /* PXDetailViewController.xib in Resources */,
 				1FF7E8A31773B14900215E38 /* Eagle.png in Resources */,
 				1FEF45B51773C3C900B1E0D6 /* Lion.png in Resources */,
 				087AF3A81776E475004034F3 /* PXNameAndImageCell.xib in Resources */,
@@ -385,6 +387,8 @@
 				B6A16AAC17777D800024F0BB /* PXSearchResultsViewController.xib in Resources */,
 				B6A16AAE17777D800024F0BB /* PXWebSearchViewController.xib in Resources */,
 				1F08DAE41777CE53005F18EF /* PXSearchResultPhotoViewController.xib in Resources */,
+				1FB8C31117783E6000E51694 /* coding_standards.txt in Resources */,
+				1F2F7D49177903DA002D2CB4 /* PXDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +428,6 @@
 				1F293CCE1770FBC9009C8DA9 /* Phylodex.xcdatamodeld in Sources */,
 				1F293CF0177101DC009C8DA9 /* PXRootViewController.m in Sources */,
 				1F293CFA17710670009C8DA9 /* PXShareViewController.m in Sources */,
-				1F5B74821773756E00F4F079 /* PXDetailViewController.m in Sources */,
 				1FF7E89B1773ABF800215E38 /* PXDummyModel.m in Sources */,
 				1FF7E89E1773AD0100215E38 /* PXDummyCollection.m in Sources */,
 				1F195647177559EA00AEB906 /* PXNetworkConnection.m in Sources */,
@@ -433,6 +436,7 @@
 				B6A16AAB17777D800024F0BB /* PXSearchResultsViewController.m in Sources */,
 				B6A16AAD17777D800024F0BB /* PXWebSearchViewController.m in Sources */,
 				1F08DAE31777CE53005F18EF /* PXSearchResultPhotoViewController.m in Sources */,
+				1F2F7D48177903DA002D2CB4 /* PXDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

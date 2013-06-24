@@ -2,6 +2,8 @@
 //  PXAppDelegate.h
 //  Phylodex
 //
+//  Description: Main app delegate, loads the tab bar view and modal views
+//
 //  Created by Steve King on 2013-06-18.
 //  Copyright (c) 2013 Phylosoft. All rights reserved.
 //

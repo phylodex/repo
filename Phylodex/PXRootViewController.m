@@ -26,6 +26,7 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     self = [super initWithStyle:style];
     if (self) {
         self.title = @"Phylodex";
+        self.tabBarItem.image = [UIImage imageNamed:@"Phylodex"];
     }
     return self;
 }
@@ -149,9 +150,14 @@ static NSString *CellTableIdentifier = @"CellTableIdentifier";
     // set the child controller, and its delegate to the root controller
     PXDetailViewController *detailViewController = [[PXDetailViewController alloc] init];
     detailViewController.delegate = self;
+
     // set the title of the detail view to the name of the animal (hard-coded for now)
     
     PXDummyModel *lifeform = [lifeforms objectAtIndex:indexPath.row];
+    //detailViewController.model = lifeform;
+    detailViewController.image = lifeform.image;
+    detailViewController.nameTextField.text = lifeform.name;
+    detailViewController.speciesTextField.text = lifeform.species;
     NSString *title = lifeform.name;
     detailViewController.title = title;
     [self.navigationController pushViewController:detailViewController animated:YES];

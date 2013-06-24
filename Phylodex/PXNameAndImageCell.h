@@ -2,6 +2,8 @@
 //  PXNameAndColorCell.h
 //  Cells
 //
+//  Description: Custom cell for a phylodex entry
+//
 //  Created by ParkaPal on 2013-06-22.
 //  Copyright (c) 2013 ParkaPal. All rights reserved.
 //

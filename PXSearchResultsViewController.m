@@ -122,15 +122,16 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
     // set the child controller, and its delegate to the root controller
     PXSearchResultPhotoViewController *child = [[PXSearchResultPhotoViewController alloc] init];
     
-    // set the title of the detail view to the name of the animal (hard-coded for now)
+    // set the title of the detail view to the name of the animal
     NSMutableDictionary *result = [searchResults objectAtIndex:indexPath.row];
     NSString *title = [result objectForKey:@"Name"];
     UIImage *image = [result objectForKey:@"Image"];
     child.title = title;
-    child.image = image; //[[UIImageView alloc] initWithImage:image];
+    child.image = image; 
     child.creditText = @"Photo by Fred Flintstone";
     child.nameText = title;
     [self.navigationController pushViewController:child animated:YES];

@@ -17,8 +17,6 @@
 
 @interface PXXMLParser : NSObject
 
-//@property (nonatomic, retain) NSMutableArray *resultItems;
-
 + (NSMutableArray *)extractItemsFromXMLData:(NSString *)data;
 
 @end

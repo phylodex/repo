@@ -2,23 +2,24 @@
 //  PXDetailViewController.h
 //  Phylodex
 //
-//  Description: Shows the Detail view for each user photo
-//
-//  Created by Steve King on 2013-06-20.
+//  Created by Steve King on 2013-06-24.
 //  Copyright (c) 2013 Phylosoft. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "PXDummyModel.h"
 
 @protocol PXDetailViewControllerDelegate;
 
-
-@interface PXDetailViewController : UITableViewController
+@interface PXDetailViewController : UIViewController
 
 @property (nonatomic, assign)id <PXDetailViewControllerDelegate>delegate;
-
--(IBAction)save:(id)sender;	// return to root view saving data
--(IBAction)cancel:(id)sender; // return to root view discarding changes
+//@property (retain, nonatomic) PXDummyModel *model;
+@property (retain, nonatomic) IBOutlet UIImage *image;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *cropButton;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *speciesTextField;
 
 @end
 
@@ -27,4 +28,3 @@
 -(void)detailViewControllerDidSave:(PXDetailViewController *)controller;
 -(void)detailViewControllerDidCancel:(PXDetailViewController *)controller;
 @end
-

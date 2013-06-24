@@ -11,8 +11,6 @@
 @implementation PXNameAndImageCell
 
 
-
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -20,31 +18,34 @@
     // Configure the view for the selected state
 }
 
-- (void)setName:(NSString *)n
+- (void)setName:(NSString *)name
 {
-    if (![n isEqualToString:_name]) {
-        _name = [n copy];
+    if (![name isEqualToString:_name]) {
+        _name = [name copy];
         _nameValue.text = _name;
-    } }
-- (void)setSpecies:(NSString *)s
+    }
+}
+
+- (void)setSpecies:(NSString *)species
 {
-    if (![s isEqualToString:_species]) {
-        _species = [s copy];
+    if (![species isEqualToString:_species]) {
+        _species = [species copy];
         _speciesValue.text = _species;
-    } }
+    }
+}
 
 //this version for images directly
-- (void)setImage:(UIImage *)i
+- (void)setImage:(UIImage *)image
 {
-    _image = [i copy];
+    _image = [image copy];
     _imagepathValue.image = _image;
 }
 
 //this version for paths
- - (void)setImagepath:(NSString *)i
+ - (void)setImagepath:(NSString *)imagepath
 {
-    if (![i isEqualToString:_imagepath]) {
-        _imagepath = [i copy];
+    if (![imagepath isEqualToString:_imagepath]) {
+        _imagepath = [imagepath copy];
         _imagepathValue.image = [UIImage imageNamed:_imagepath];
     }
 }
