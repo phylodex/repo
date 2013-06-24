@@ -401,14 +401,7 @@
 				B6A16AAC17777D800024F0BB /* PXSearchResultsViewController.xib in Resources */,
 				B6A16AAE17777D800024F0BB /* PXWebSearchViewController.xib in Resources */,
 				1F08DAE41777CE53005F18EF /* PXSearchResultPhotoViewController.xib in Resources */,
-<<<<<<< HEAD
-				1F08DAE71777D54C005F18EF /* Search.png in Resources */,
-				1F08DAE81777D54C005F18EF /* Phylodex.png in Resources */,
-				1F275C061777FFED0035B7FB /* PXDetailPhotoCell.xib in Resources */,
-				1F275C1017781DD70035B7FB /* PXDetailViewController.xib in Resources */,
-=======
 				082F898F1778236600780AA5 /* Search.png in Resources */,
->>>>>>> cb833c157ce762202dce7c7eac4e72f4802ab0cf
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
