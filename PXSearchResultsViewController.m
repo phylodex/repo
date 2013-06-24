@@ -21,6 +21,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -46,16 +47,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [searchResults count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,7 +66,9 @@
     }
     
     // Configure the cell...
-    
+    NSMutableDictionary *result = [searchResults objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:[result objectForKey:@"Name"]];
+        
     return cell;
 }
 
@@ -121,6 +122,18 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    // set the child controller, and its delegate to the root controller
+    PXSearchResultPhotoViewController *child = [[PXSearchResultPhotoViewController alloc] init];
+    
+    // set the title of the detail view to the name of the animal (hard-coded for now)
+    NSMutableDictionary *result = [searchResults objectAtIndex:indexPath.row];
+    NSString *title = [result objectForKey:@"Name"];
+    UIImage *image = [result objectForKey:@"Image"];
+    child.title = title;
+    child.image = image; //[[UIImageView alloc] initWithImage:image];
+    child.creditText = @"Photo by Fred Flintstone";
+    child.nameText = title;
+    [self.navigationController pushViewController:child animated:YES];
 }
 
 @end

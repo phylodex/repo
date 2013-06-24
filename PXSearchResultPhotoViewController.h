@@ -2,22 +2,19 @@
 //  PXSearchResultPhotoViewController.h
 //  Phylodex
 //
-//  Created by Daniel Hua on 13-6-22.
-//  Copyright (c) 2013年 Phylosoft. All rights reserved.
+//  Created by Steve King on 2013-06-23.
+//  Copyright (c) 2013 Phylosoft. All rights reserved.
 //
-
 #import <UIKit/UIKit.h>
 
 
-@interface PXSearchResultPhotoViewController : UIViewController <UIApplicationDelegate> {
-    NSMutableArray *discription;
-    UIImageView *picture;
-    
-}
+@interface PXSearchResultPhotoViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet UIImageView *picture;
-@property (retain, nonatomic) IBOutlet UITableView *resultDiscription;
-@property (retain, nonatomic) NSMutableArray *discription;
-@property (retain, nonatomic) id detailItem;
+@property (retain, nonatomic) UIImage *image;
+@property (retain, nonatomic) NSString *nameText;
+@property (retain, nonatomic) NSString *creditText;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *creditLabel;
+@property (retain, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

@@ -9,6 +9,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PXDummyCollection.h"
 
 // define the identifiers to extract info from the xml data
 #define NAME_ID = @"name"
